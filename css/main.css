@@ -19,16 +19,137 @@ a {
 }
 img {
   display: block;
-  margin: 0 auto;
 }
 .inner {
   width: 1100px;
   height: 120px;
   margin: 0 auto;
-  background-color: orange;
+  position: relative;
 }
 
 /*HEADER*/
 header{
-  background-color: dodgerblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f6f5ef;
+  border-bottom: 1px solid #eae7e2;
+  border-top: 2px solid black;
+  z-index: 1;
+}
+
+header .inner .logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  width: 75px;
+}
+
+/*SUB MENU*/
+header .inner .sub-menu {
+  /*transform: translateX(150px);
+  top: 60px;
+  right: 50px;
+  width: 500px;*/
+  display: flex;
+  position: absolute;
+  top: 6px;
+  right: 50px;
+}
+header .inner .sub-menu .sub-menu__menu{
+  /*display: flex;
+  color: #c18888;
+  transform: translateX(400px);
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 13px;*/
+  display: flex;
+}
+header .inner .sub-menu .sub-menu__menu > li{}
+header .inner .sub-menu .sub-menu__menu > li:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  color: #e5e5e5;
+}
+header .inner .sub-menu .sub-menu__menu > li > a{
+  display: block;
+  font-size: 13px;
+  color: #656565;
+  padding: 10px 15px;
+}
+header .inner .sub-menu .sub-menu__menu > li > a:hover{
+  text-decoration: underline;
+}
+header .inner .sub-menu .search{
+  /*transform: translate(900px,-32px);*/
+  position: relative;
+}
+header .inner .sub-menu .search > input{
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  transition: width 0.4s;
+}
+header .inner .sub-menu .search > input:focus {
+  width: 190px;
+  
+}
+header .inner .sub-menu .search > span{
+  /*position: absolute;
+  left: 2px;
+  top: 3px;*/
+  position: absolute;
+  margin: auto;
+  right: 3px;
+  top: 0;
+  bottom: 0;
+  height: 24px;
+}
+
+/*MAIN MENU*/
+header .inner .main-menu {
+  /*position: relative;
+  display: flex;
+  top: 50px;
+  left: 270px;
+  height: 70px;*/
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 0;
+}
+header .inner .main-menu .item{
+}
+header .inner .main-menu .item:hover .item__name{
+  background-color: #2c2a29;
+  color: #669900;
+  cursor: pointer;
+  text-decoration: underline;
+}
+header .inner .main-menu .item .item__name{
+  font-size: 13px;
+  padding: 10px 20px 34px 20px;/*이거를 여기다 넣어야 전체 hover가능 ?*/
+}
+header .inner .main-menu .item .item__contents {
+  display: none;
+  position: fixed;
+  background-color: orange;
+  width: 100%;
+  height: 100px;
+  left: 0px;
+  top: 120px;
+}
+header .inner .main-menu .item:hover .item__contents{
+  display: block;
 }
