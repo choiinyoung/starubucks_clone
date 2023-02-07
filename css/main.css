@@ -25,7 +25,9 @@ img {
   margin: 0 auto;
   position: relative;
 }
-
+.strong {
+  font-weight: 700;
+}
 /* BUTTON*/
 .btn {
   display: inline-block;
@@ -307,17 +309,155 @@ header .badges .badge img {
 }*/
 
 /*NOTICE*/
-.notice {}
-.notice .notice-line{}
-.notice .notice-line .bg-left{}
-.notice .notice-line .bg-right{}
-.notice .notice-line .inner{}
-.notice .notice-line .inner .inner__left{}
-.notice .notice-line .inner .inner__left h1{}
-.notice .notice-line .inner .inner__left div{}
-.notice .notice-line .inner .inner__left a{}
-.notice .notice-line .inner .inner__left a span{} 
-.notice .notice-line .inner .inner__right{} 
-.notice .notice-line .inner .inner__right h1{}
-.notice .notice-line .inner .inner__right a{}
-.notice .notice-line .inner .inner__right a span{}
+.notice{
+  position: relative;
+}
+.notice .notice-line{
+  position: relative;
+}
+.notice .notice-line .bg-left{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #111111;
+}
+.notice .notice-line .bg-right{
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color:#f6f5ef ;
+}
+.notice .notice-line .inner{
+  height: 62px;
+  display: flex;
+  font-weight: bold;
+}
+.notice .notice-line .inner .inner__left{
+  display: flex;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #111111;
+  color: white;
+  align-items: center;
+}
+.notice .notice-line .inner .inner__left h1{
+  position: absolute;
+  left: 0%;
+  font-size: 16px;
+}
+.notice .notice-line .inner .inner__left div{
+  position: absolute;
+  left: 80px;
+  font-size: 14px;
+}
+.notice .notice-line .inner .inner__left a{
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+.notice .notice-line .inner .inner__left a span{
+  font-size: 36px;
+  display: block;
+} 
+.notice .notice-line .inner .inner__right{
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f6f5ef;
+} 
+.notice .notice-line .inner .inner__right h1{
+  position: absolute;
+  right: 120px;
+  font-size: 16px;
+}
+.notice .notice-line .inner .inner__right a{
+  position: absolute;
+  right: 20px;
+  color: black;
+}
+.notice .notice-line .inner .inner__right a span{
+  font-size: 36px;
+  display: block;
+}
+/* REWARDS */
+.rewards{
+  position: relative;
+  background-color: #1e3932;
+}
+.rewards .inner{
+  position: relative;
+  padding: 30px 0 40px 0;
+  display: flex;
+}
+.rewards .inner .rewards__logo{
+  display: flex;
+  flex-basis: 260px;
+  justify-content: center;
+  align-items: center;
+}
+.rewards .inner .rewards__logo img{
+  display: block;
+  width: 176px;
+}
+.rewards .inner .rewards__items{
+  flex-grow: 1;
+}
+
+.rewards .inner .rewards__items .rewards__items__register{
+  position: relative;
+  padding-bottom: 12px;
+  box-shadow: 0 0.5px #c8c8c8;
+}
+.rewards .inner .rewards__items .rewards__items__register p{
+  display: block;
+  font-size: 17px;
+  color: white;
+}
+.rewards .inner .rewards__items .rewards__items__register p.subject{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.rewards .inner .rewards__items .rewards__items__register .buttons{
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+}
+.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register{
+  background-color: #00704a;
+  border-color: #00704a;
+  color: white;
+  margin-right: 6px;
+  font-weight: bold;
+}
+.rewards .inner .rewards__items .rewards__items__register .buttons .btn--login,
+.rewards .inner .rewards__items .rewards__items__card .buttons .btn--login{
+  border-color: white;
+  color: white;
+  font-weight: bold;
+}
+.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register:hover,
+.rewards .inner .rewards__items .rewards__items__register .buttons .btn--login:hover,
+.rewards .inner .rewards__items .rewards__items__card .buttons .btn--login:hover{
+  text-decoration: underline;
+}
+.rewards .inner .rewards__items .rewards__items__card{
+  position: relative;
+}
+.rewards .inner .rewards__items .rewards__items__card p{
+  display: block;
+  font-size: 14px;
+  color: white;
+  margin-top: 20px;
+}
+.rewards .inner .rewards__items .rewards__items__card .buttons{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
