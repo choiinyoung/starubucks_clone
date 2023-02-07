@@ -22,7 +22,6 @@ img {
 }
 .inner {
   width: 1100px;
-  height: 120px;
   margin: 0 auto;
   position: relative;
 }
@@ -37,7 +36,9 @@ header{
   border-top: 2px solid black;
   z-index: 1;
 }
-
+header > .inner {
+  height: 120px;
+}
 header .inner .logo {
   position: absolute;
   margin: auto;
@@ -47,7 +48,6 @@ header .inner .logo {
   height: 75px;
   width: 75px;
 }
-
 /*SUB MENU*/
 header .inner .sub-menu {
   /*transform: translateX(150px);
@@ -102,8 +102,7 @@ header .inner .sub-menu .search > input{
   transition: width 0.4s;
 }
 header .inner .sub-menu .search > input:focus {
-  width: 190px;
-  
+  width: 190px;  
 }
 header .inner .sub-menu .search > span{
   /*position: absolute;
@@ -116,7 +115,6 @@ header .inner .sub-menu .search > span{
   bottom: 0;
   height: 24px;
 }
-
 /*MAIN MENU*/
 header .inner .main-menu {
   /*position: relative;
@@ -129,8 +127,7 @@ header .inner .main-menu {
   right: 0;
   bottom: 0;
 }
-header .inner .main-menu .item{
-}
+header .inner .main-menu .item{}
 header .inner .main-menu .item:hover .item__name{
   background-color: #2c2a29;
   color: #669900;
@@ -142,14 +139,44 @@ header .inner .main-menu .item .item__name{
   padding: 10px 20px 34px 20px;/*이거를 여기다 넣어야 전체 hover가능 ?*/
 }
 header .inner .main-menu .item .item__contents {
-  display: none;
   position: fixed;
-  background-color: orange;
   width: 100%;
-  height: 100px;
-  left: 0px;
+  left: 0;  /*제일 왼쪽으로 붙음*/
   top: 120px;
+  display: none;
 }
 header .inner .main-menu .item:hover .item__contents{
-  display: block;
+  display: block; /*이걸 해야지 hover상태에 밑에 메뉴 눌러도 hover가 해제 안됨*/
+}
+
+header .inner .main-menu .item .item__contents .item__contents__menu{
+  background-color: #2c2a29;
+  padding: 20px 0px;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner{
+  display: flex;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li{
+  width: 200px;
+  padding-right: 20px;  /*width 1100px를 5로 나눔 하나에 220px을 갖게끔*/
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > a{
+  display: block; /*이걸 해줘야 margin과 padding 값이 적용됨*/
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > a:hover{
+  text-decoration: underline;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul{}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li{
+  color: #999;
+  font-size: 12px;
+  margin: 5px 0;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
