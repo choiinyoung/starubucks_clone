@@ -144,6 +144,9 @@ header .inner .main-menu .item .item__contents {
   left: 0;  /*제일 왼쪽으로 붙음*/
   top: 120px;
   display: none;
+  /*transform: scaleY(0);
+  transform-origin: center top;
+  transition: 0.5s;*/
 }
 header .inner .main-menu .item:hover .item__contents{
   display: block; /*이걸 해야지 hover상태에 밑에 메뉴 눌러도 hover가 해제 안됨*/
@@ -179,4 +182,22 @@ header .inner .main-menu .item .item__contents .item__contents__menu .inner > li
 header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* BADGES */
+header .badges {
+  position: absolute;
+  top: 150px;
+  left: calc(1100px + (100vw - 1100px) / 2);
+}
+header .badges .badge {}
+header .badges .badge img {
+  width:140px;
+  cursor: pointer;
+}
+@media screen and (max-width : 1400px) {
+  header .badges {
+    left: calc(100vw - 150px);
+  }
+  /*이거하면 화면이 작아져도 계속 배지가 옆에 있음*/
 }
