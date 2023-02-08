@@ -58,6 +58,17 @@ img {
   color: white;
   text-decoration: underline;
 }
+.btn--gold {
+  border-color: #966935;
+  color: #966932;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.btn--gold:hover {
+  background-color: #966935;
+  color: white;
+  text-decoration: underline;
+}
 /*HEADER*/
 header{
   width: 100%;
@@ -524,4 +535,49 @@ header .badges .badge img {
   /*position: absolute;
   top: 130px;*/
   margin-top: 40px;
+}
+
+/* ETHIOPIA */
+.ethiopia {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/ethiopia_bg.png");
+  overflow: hidden;
+}
+.ethiopia::before{
+  content: "";  /*이게 없으면 아래 내용은 전부 무시됨*/
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 425px;
+  height: 404px;
+  background-image: url("../images/ethiopia_before.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ethiopia::after{ 
+  content: "";  
+  position: absolute;
+  background-image: url("../images/ethiopia_after.png");
+  bottom: 0;
+  right: 0;
+  width: 361px;
+  height: 404px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ethiopia .inner{}
+.ethiopia .inner .ethiopia__contents{
+  position: absolute;
+  width: 496px;
+  top:120px;
+}
+.ethiopia .inner .ethiopia__item{
+  position: absolute;
+  left: -500px;
+}
+.ethiopia .inner a{
+  position: absolute;
+  top: 300px;
+  left: 270px;
 }
