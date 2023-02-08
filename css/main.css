@@ -611,29 +611,40 @@ header .badges .badge img {
   height: 800px;
   background-image: url("../images/fav_bg.png");
   background-size: cover;
+  background-attachment: fixed; /*화면이 따라오는거같은 느낌을 들게함*/
   overflow: hidden;
 }
 .favorite .inner{}
 .favorite .inner .favorite__content1{
   position: absolute;
   width: 258px;
-  top: 150px;
-  left: 110px;
+  top: 120px;
+  left: 108px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2s;
 }
 .favorite .inner .favorite__content2{
   position: absolute;
-  height: 156px;
-  top: 400px;
-  left: 10px;
+  width: 362px;
+  top: 370px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.favorite:active .inner .favorite__content1,
+.favorite:active .inner .favorite__content2 {
+  transform: translateX(0);
+  opacity: 1;
 }
 .favorite .inner .btn.btn--white{
   position: absolute;
-  top: 600px;
-  left: 250px;
+  top: 580px;
+  left: 238px;
   }
 .favorite .inner .favorite__item{
   position: absolute;
   width: 912px;
-  left: 480px;
-  top: 130px;
+  right: -260px;
+  top: 100px;
 }
