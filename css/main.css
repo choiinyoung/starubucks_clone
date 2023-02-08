@@ -13,7 +13,6 @@ body{
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 30000px;
 }
 a {
   text-decoration: none;
@@ -67,6 +66,17 @@ img {
 .btn--gold:hover {
   background-color: #966935;
   color: white;
+  text-decoration: underline;
+}
+.btn--white{
+  border-color: #fff;
+  color: #fff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.btn--white:hover{
+  background-color: #fff;
+  color: black;
   text-decoration: underline;
 }
 /*HEADER*/
@@ -554,6 +564,7 @@ header .badges .badge img {
   background-image: url("../images/ethiopia_before.png");
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0;
 }
 .ethiopia::after{ 
   content: "";  
@@ -565,8 +576,14 @@ header .badges .badge img {
   height: 404px;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0;
 }
 .ethiopia .inner{}
+.ethiopia:active::before,
+.ethiopia:active::after{
+  transition: 1.5s;
+  opacity: 1;
+}
 .ethiopia .inner .ethiopia__contents{
   position: absolute;
   width: 496px;
@@ -575,9 +592,48 @@ header .badges .badge img {
 .ethiopia .inner .ethiopia__item{
   position: absolute;
   left: -500px;
+  opacity: 0;
+}
+.ethiopia .inner .ethiopia__item:active{
+  transition: 1.5s;
+  transition-delay: 0.8s;
+  opacity: 1;
 }
 .ethiopia .inner a{
   position: absolute;
   top: 300px;
   left: 270px;
+}
+
+/* FAVORITE */
+.favorite{
+  position: relative;
+  height: 800px;
+  background-image: url("../images/fav_bg.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.favorite .inner{}
+.favorite .inner .favorite__content1{
+  position: absolute;
+  width: 258px;
+  top: 150px;
+  left: 110px;
+}
+.favorite .inner .favorite__content2{
+  position: absolute;
+  height: 156px;
+  top: 400px;
+  left: 10px;
+}
+.favorite .inner .btn.btn--white{
+  position: absolute;
+  top: 600px;
+  left: 250px;
+  }
+.favorite .inner .favorite__item{
+  position: absolute;
+  width: 912px;
+  left: 480px;
+  top: 130px;
 }
